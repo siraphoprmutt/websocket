@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Login</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-96 text-center">
+        <h1 class="text-2xl font-semibold mb-4">Scan QR Code to Login</h1>
+        <div class="relative w-64 h-64 mx-auto mb-4">
+            <!-- QR Code Container -->
+            <img id="qrCode" class="absolute inset-0 w-full h-full rounded-lg transition-all duration-300 opacity-0"
+                alt="QR Code Not Loaded" loading="lazy">
+            <!-- Skeleton Loader -->
+            <div id="qrSkeleton" class="absolute inset-0 bg-gray-300 rounded-lg animate-pulse"></div>
+            <!-- Blur Overlay -->
+            <div id="qrBlur" class="absolute inset-0 bg-white/60 backdrop-blur-md hidden"></div>
+        </div>
+        <p id="status" class="text-gray-600 text-lg">Status: Waiting...</p>
+        <p id="session_id" class="text-gray-500 text-sm mt-2"></p>
+        <p id="countdown" class="text-gray-500 text-sm mt-2"></p>
+        <button id="refreshQR"
+            class="mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
+            🔄 เปลี่ยน QR Code
+        </button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

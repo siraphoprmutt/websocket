@@ -1,0 +1,10 @@
+# 🚀 Ignore ไฟล์ที่ไม่จำเป็นสำหรับ Docker ใน root
+.git
+.gitignore
+.DS_Store
+.env
+.vscode
+.idea
+logs
+*.log
+node_modules

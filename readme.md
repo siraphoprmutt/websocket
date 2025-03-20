@@ -7,6 +7,7 @@
 ```bash
 # เริ่มใช้งาน
 # ติดตั้ง Package node_modules
+cd app
 npm install
 
 # สร้างและรันคอนเทนเนอร์ใหม่ในโหมดพื้นหลัง
